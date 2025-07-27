@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Generator AI - Marketing Campaign Builder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    Ad Generator AI
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#demo">Generator</a></li>
+                    <li><a href="#analytics">Analytics</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="secondary-button" id="loginBtn">Login</button>
+                    <button class="cta-button" id="registerBtn">Register</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>AI-Powered Marketing Campaign Builder</h1>
+            <p>Create stunning campaigns in minutes with our AI-powered platform. Generate ads, quotes, and visuals that
+                convert across all channels.</p>
+            <div class="hero-buttons">
+                <button class="cta-button" id="heroGenerateBtn">Start Free Trial</button>
+                <button class="secondary-button">View Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard" id="dashboard">
+        <div class="container">
+            <div class="section-title">
+                <h2>Campaign Dashboard</h2>
+                <p>Manage all your marketing campaigns in one place</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="sidebar">
+                    <h3>Navigation</h3>
+                    <ul class="sidebar-menu">
+                        <!-- <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="#"><i class="fas fa-plus-circle"></i> Create Campaign</a></li>
+                        <li><a href="#"><i class="fas fa-folder"></i> Campaign Library</a></li>
+                        <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i> Team</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li> -->
+                        <li><a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="#demo"><i class="fas fa-plus-circle"></i> Create Campaign</a></li>
+                        <li><a href="#dashboard"><i class="fas fa-folder"></i> Campaign Library</a></li>
+                        <li><a href="#analytics"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                    </ul>
+
+                    <h3 style="margin-top: 40px;">Recent Activity</h3>
+                    <div class="recent-activity">
+                        <div class="activity-item">
+                            <p><strong>Eco Bottle Campaign</strong> exported</p>
+                            <small>2 hours ago</small>
+                        </div>
+                        <div class="activity-item">
+                            <p><strong>Summer Sale</strong> scheduled</p>
+                            <small>Yesterday</small>
+                        </div>
+                        <div class="activity-item">
+                            <p>New team member <strong>Sarah</strong> added</p>
+                            <small>2 days ago</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-content">
+                    <div class="section-title" style="text-align: left; margin-bottom: 20px;">
+                        <h3>Your Campaigns</h3>
+                        <p>All your marketing campaigns in one place</p>
+                    </div>
+
+                    <div class="campaign-cards">
+                        <!-- Campaigns will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>20 Powerful Marketing Features</h2>
+                <p>Everything you need to create, manage, and optimize your campaigns</p>
+            </div>
+            <div class="features-grid">
+                <!-- Feature 1 to 20 -->
+                <div class="feature-card floating">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Campaign Ideas</h3>
+                    <p>AI-generated campaign concepts tailored to your product</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 0.2s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Visual Creation</h3>
+                    <p>Generate posters and banners with AI</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 0.4s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-save"></i>
+                    </div>
+                    <h3>Save Campaigns</h3>
+                    <p>Store all your campaigns securely</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 0.6s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-export"></i>
+                    </div>
+                    <h3>Export Campaigns</h3>
+                    <p>Export as PDF, HTML or images</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 0.8s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Campaign Dashboard</h3>
+                    <p>Manage all campaigns in one place</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 1.0s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Real-Time Updates</h3>
+                    <p>See changes instantly</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 1.2s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>User-Friendly Interface</h3>
+                    <p>Intuitive and easy to use</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 1.4s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Persistent Storage</h3>
+                    <p>Data saved after refresh</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 1.6s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Customizable Tone</h3>
+                    <p>Professional, Fun, Urgent, etc.</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 1.8s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Multi-Use Support</h3>
+                    <p>For all business types</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 2.0s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Performance Analytics</h3>
+                    <p>Track campaign success</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 2.2s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Multilingual Support</h3>
+                    <p>Create campaigns in any language</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 2.4s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Predefined Templates</h3>
+                    <p>Industry-specific designs</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 2.6s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Campaign Scheduling</h3>
+                    <p>Plan and schedule posts</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 2.8s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Social Media Integration</h3>
+                    <p>Post directly to platforms</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 3.0s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Audience Targeting</h3>
+                    <p>Reach the right customers</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 3.2s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Team Collaboration</h3>
+                    <p>Work together on campaigns</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 3.4s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Responsive</h3>
+                    <p>Works on all devices</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 3.6s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Version History</h3>
+                    <p>Track changes over time</p>
+                </div>
+                <div class="feature-card floating" style="animation-delay: 3.8s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure & Private</h3>
+                    <p>Enterprise-grade security</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="section-title">
+                <h2>Try It Yourself</h2>
+                <p>Generate your first campaign in seconds</p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-content">
+                    <h2>Create Your Campaign</h2>
+                    <p>Fill in the details below and let our AI create a customized marketing campaign for you.</p>
+                    <p>Our platform will generate ad copy, visuals, and quotes tailored to your product and audience.
+                    </p>
+                    <button class="cta-button" style="margin-top: 30px;" id="generateCampaignBtn">Generate
+                        Campaign</button>
+                </div>
+                <div class="demo-box">
+                    <form class="campaign-form" id="campaignForm">
+                        <div class="form-group">
+                            <label for="product">Product/Service</label>
+                            <input type="text" id="product" placeholder="Enter product name">
+                        </div>
+                        <div class="form-group">
+                            <label for="audience">Target Audience</label>
+                            <input type="text" id="audience" placeholder="Enter The Target Audience">
+                        </div>
+                        <div class="form-group">
+                            <label for="tone">Campaign Tone</label>
+                            <select id="tone">
+                                <option value="professional">Professional</option>
+                                <option value="friendly" selected>Friendly</option>
+                                <option value="urgent">Urgent</option>
+                                <option value="luxury">Luxury</option>
+                                <option value="fun">Fun & Playful</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Language</label>
+                            <select id="language">
+                                <option value="english" selected>English</option>
+                                <option value="spanish">Spanish</option>
+                                <option value="french">French</option>
+                                <option value="german">German</option>
+                                <option value="japanese">Japanese</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="details">Additional Details</label>
+                            <textarea id="details" rows="4"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preview Section -->
+    <section class="preview-section" id="preview">
+        <div class="container">
+            <div class="section-title">
+                <h2>AI-Generated Campaign Preview</h2>
+                <p>See what our AI creates for you</p>
+            </div>
+            <div class="preview-box">
+                <div class="preview-header">
+                    <h3>Your Campaign Preview</h3>
+                    <p>Generated based on your input</p>
+                </div>
+                <div class="preview-content">
+                    <div class="ad-preview">
+                        <h3>Ad Copy</h3>
+                        <p id="adCopy">Stay hydrated sustainably! Our eco-friendly water bottles are made from recycled
+                            materials and keep your drinks cold for 24 hours. Perfect for the environmentally conscious
+                            adventurer.</p>
+                    </div>
+                    <div class="ad-preview">
+                        <h3>Social Media Post</h3>
+                        <p id="socialMedia">🌱 New arrival! Our eco-friendly water bottles are here to help you reduce
+                            plastic waste. Made from 100% recycled materials and designed to last. #EcoFriendly
+                            #SustainableLiving</p>
+                    </div>
+                    <div class="ad-preview">
+                        <h3>Quote</h3>
+                        <p id="quote">"Small changes can make a big difference. Choose sustainability with every sip."
+                        </p>
+                    </div>
+                    <div class="ad-preview">
+                        <h3>AI-Generated Image</h3>
+                        <div id="aiImage" style="text-align: center; margin-top: 20px;">
+                            <img src="" alt="AI Generated Image" id="campaignImage"
+                                style="max-width: 100%; border-radius: 8px; display: none;">
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="cta-button" id="saveBtn">Save Campaign</button>
+                    <button class="secondary-button" id="exportBtn">Export as PDF</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section class="analytics" id="analytics">
+        <div class="container">
+            <div class="section-title">
+                <h2>Campaign Analytics</h2>
+                <p>Track performance and optimize your marketing efforts</p>
+            </div>
+
+            <div class="analytics-grid">
+                <div class="metric-card">
+                    <i class="fas fa-eye fa-2x" style="color: var(--accent);"></i>
+                    <div class="metric-value">12,458</div>
+                    <div class="metric-label">Total Impressions</div>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-mouse-pointer fa-2x" style="color: var(--accent);"></i>
+                    <div class="metric-value">1,843</div>
+                    <div class="metric-label">Total Clicks</div>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-shopping-cart fa-2x" style="color: var(--accent);"></i>
+                    <div class="metric-value">327</div>
+                    <div class="metric-label">Conversions</div>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-percentage fa-2x" style="color: var(--accent);"></i>
+                    <div class="metric-value">2.63%</div>
+                    <div class="metric-label">Conversion Rate</div>
+                </div>
+            </div>
+
+            <div class="preview-box" style="margin-top: 50px;">
+                <div class="preview-header">
+                    <h3>Performance by Campaign</h3>
+                    <p>See how your campaigns are performing</p>
+                </div>
+                <div class="preview-content">
+                    <div
+                        style="display: flex; justify-content: space-between; margin-bottom: 20px; padding: 10px; background: rgba(15, 23, 42, 0.3); border-radius: 8px;">
+                        <div style="flex: 2;"><strong>Campaign</strong></div>
+                        <div style="flex: 1;"><strong>Impressions</strong></div>
+                        <div style="flex: 1;"><strong>Clicks</strong></div>
+                        <div style="flex: 1;"><strong>Conv. Rate</strong></div>
+                    </div>
+                    <div id="analyticsData">
+                        <!-- Analytics data will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo" style="color: white; margin-bottom: 20px;">
+                        <i class="fas fa-brain"></i>
+                        AdGenius AI
+                    </div>
+                    <p>AI-powered marketing campaign builder that helps you create compelling ads and visuals across
+                        multiple categories.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Features</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Campaign Generation</a></li>
+                        <li><a href="#">Visual Creation</a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Scheduling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Marketing Guides</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> contact@adgenius.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AdGenius AI. All rights reserved. AI-Powered Marketing Campaign Builder.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modals -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Login to Your Account</h2>
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="cta-button">Login</button>
+            </form>
+            <div class="form-footer">
+                Don't have an account? <a href="#" id="showRegister">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Create an Account</h2>
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirm">Confirm Password</label>
+                    <input type="password" id="registerConfirm" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="cta-button">Create Account</button>
+            </form>
+            <div class="form-footer">
+                Already have an account? <a href="#" id="showLogin">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+
+</html>
